@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS images;
+
+CREATE TABLE images (
+  filepath TEXT PRIMARY KEY
+);
