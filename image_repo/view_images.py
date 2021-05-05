@@ -14,10 +14,5 @@ def view_all():
 
 @bp.route('/images')
 def display_all():
-    # images = view_all()["images"]
-    db = get_db()
-    rows = db.execute(
-        'SELECT * FROM images'
-    ).fetchall()
-    images = [row[0] for row in rows]
+    images = view_all()["images"]
     return render_template("images.html", images=images)

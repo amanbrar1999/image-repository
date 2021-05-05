@@ -7,8 +7,6 @@ bp = Blueprint('add', __name__, url_prefix='/add')
 def add():
     db = get_db()
     path = str(request.form['path'])
-    print(request.form)
-    print(path)
     if path is None:
         flash("path field was not provided in request form")
     db.execute(

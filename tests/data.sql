@@ -1,0 +1,1 @@
+INSERT INTO images (filepath) VALUES ('squirtle.jpg'), ('lucario.webp');
