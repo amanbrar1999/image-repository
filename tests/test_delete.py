@@ -4,7 +4,7 @@ def test_delete_image(client):
     response1 = client.get("/view")
     assert b"squirtle.jpg" in response1.data
 
-    response2 = client.post("/delete", data={"path": "squirtle.jpg"})
+    response2 = client.post("/delete", json={"paths": ["squirtle.jpg"]})
     assert response2.status_code == 200
 
     response3 = client.get("/view")

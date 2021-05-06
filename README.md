@@ -37,17 +37,17 @@ This application currently supports the following functionality:
 
 `GET /` healthcheck endpoint to ensure the application is running with a simple get request
 
-`POST /add` adding an image path to the database. data must be of the form `{"path": "path/to/image"}`
+`POST /add` adding image paths to the database. data must be of the form `{"paths": ["path/to/image"]}`, and the image must be stored under `image_repo/static`
 
-`POST /delete` removing an image path from the database. data must be of the form `{"path": "path/to/image"}`
+`POST /delete` removing image paths from the database. data must be of the form `{"paths": ["path/to/image"]}`
 
-`GET /view` view all image paths in the database
+`GET /view` view all image paths in the database. Individual images can be queried with query parameter `image`
 
-`GET /view/images` view html page of all images in the database
+`GET /view/images` view html page of all images in the database. Individual images can be queried with query parameter `image`
 
 ## Testing
 
-Unit and integration tests have been included in the `/tests` directory
+Unit and integration tests have been included in the `tests/` directory
 
 ## Future Improvements for Productionizing
 

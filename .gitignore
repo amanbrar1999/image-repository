@@ -3,3 +3,4 @@ __pycache__/
 .vscode/
 instance/
 .pytest_cache/
+data.json
