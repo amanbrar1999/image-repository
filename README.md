@@ -47,7 +47,12 @@ This application currently supports the following functionality:
 
 ## Testing
 
-Unit and integration tests have been included in the `tests/` directory
+Unit and integration tests have been included in the `tests/` directory. 
+Tests can be ran using the following command in the root directory:
+
+```
+$ PYTHONPATH=. pytest
+```
 
 ## Future Improvements for Productionizing
 
