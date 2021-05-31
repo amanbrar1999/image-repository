@@ -54,6 +54,12 @@ Tests can be ran using the following command in the root directory:
 $ PYTHONPATH=. pytest
 ```
 
+Manual testing can be performed through command line using curl. An example request can be made as follows:
+
+```
+$ curl -X POST -H "Content-Type: application/json" -d '{"paths": ["bulbasaur.jpg"]}' http://localhost:5000/delete
+```
+
 ## Future Improvements for Productionizing
 
 As of now, file paths are stored in the database and the actual images are stored locally. A possible solution to make this better for a production environment is to store images in a cloud storage system such as AWS S3, and store the S3 file paths within the database instead of the current local filepaths.
